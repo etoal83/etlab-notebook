@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "etlab-notebook"
+version = "0.1.0"
+description = ""
+authors = ["etoal83 <etoal83@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jupyter = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+poethepoet = "^0.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+start = "poetry run jupyter notebook"
+stop  = "poetry run jupyter notebook stop 8888"
